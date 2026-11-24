@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎮 GAME STORE</h1>
+        <p>Encontre seus jogos favoritos!</p>
+    </header>
+
+    <main>
+        <div class="controles">
+            <input type="text" id="search" placeholder="Buscar jogo...">
+
+            <select id="category">
+                <option value="Todas">Todas as categorias</option>
+            </select>
+
+            <button id="btnRender">Atualizar</button>
+        </div>
+
+        <h2>Jogos disponíveis</h2>
+
+        <div id="product-list"></div>
+
+        <h2>Detalhes do jogo</h2>
+
+        <div id="product-details">
+            <p>Selecione um jogo para ver os detalhes.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Game Store - Sua loja de jogos!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

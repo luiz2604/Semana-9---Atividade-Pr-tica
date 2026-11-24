@@ -1,0 +1,230 @@
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b16;
+    color: white;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+header {
+    background: linear-gradient(135deg, #19132e, #29134b);
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 2px solid #8b5cf6;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+}
+
+header h1 {
+    color: #c4b5fd;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #c7c4d8;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+h2 {
+    color: #c4b5fd;
+    margin: 30px 0 20px;
+    font-size: 23px;
+}
+
+/* ÁREA DE BUSCA */
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: #171629;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #30264e;
+}
+
+input, select {
+    padding: 12px 15px;
+    border: 1px solid #55417e;
+    border-radius: 7px;
+    background: #242139;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+input {
+    width: 280px;
+}
+
+input:focus, select:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.3);
+}
+
+input::placeholder {
+    color: #aaa3bd;
+}
+
+/* BOTÕES */
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background: #7c3aed;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #9b5cf6;
+    transform: translateY(-2px);
+}
+
+/* LISTA DE PRODUTOS */
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+/* CARDS */
+.card {
+    background: linear-gradient(145deg, #1c1a30, #151425);
+    border: 1px solid #383052;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #9565ed;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+/* IMAGENS DOS JOGOS */
+.card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #10101c;
+}
+
+/* NOME DO JOGO */
+.card h3 {
+    color: #c4b5fd;
+    font-size: 17px;
+    margin: 15px 0 10px;
+}
+
+/* INFORMAÇÕES DOS JOGOS */
+.card p {
+    color: #d1cde0;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* BOTÕES DOS CARDS */
+.card button {
+    margin: 5px 3px;
+    font-size: 12px;
+}
+
+/* DESTAQUE DO PRODUTO */
+.highlight {
+    border: 2px solid #c084fc;
+    box-shadow: 0 0 18px rgba(192, 132, 252, 0.5);
+    background: #292044;
+}
+
+/* DETALHES DO JOGO */
+#product-details {
+    background: #19172b;
+    border: 1px solid #7045b5;
+    border-radius: 12px;
+    padding: 25px;
+    min-height: 100px;
+    line-height: 1.7;
+}
+
+#product-details h3 {
+    color: #c4b5fd;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+#product-details p {
+    color: #ddd8ec;
+    margin: 8px 0;
+}
+
+/* RODAPÉ */
+footer {
+    background: #171329;
+    border-top: 1px solid #48316e;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    color: #aaa3bd;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+
+    .controles {
+        flex-direction: column;
+    }
+
+    input, select, .controles button {
+        width: 100%;
+    }
+
+    #product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card img {
+        height: 115px;
+    }
+
+    .card button {
+        width: 100%;
+        margin: 4px 0;
+    }
+}
